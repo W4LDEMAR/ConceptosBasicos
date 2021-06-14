@@ -58,6 +58,13 @@ public class SmartPhone {
     }
 
     public void setTamano(float tamano) {
+        System.out.println("Valor para tamaño:");
+        //validaciones
+        if(tamano <= 10.0f && tamano > 3.0f ){
+            this.tamano = tamano;
+        }else{
+            System.out.println("Este tamaño no corresponde a un telefono");
+        }
         this.tamano = tamano;
     }
 
@@ -71,6 +78,13 @@ public class SmartPhone {
         return true;
     }
     
+    
+    /**
+     * El metodo "llamar" simula el funcionamiento del programa del telefono 
+     * en un smartphone. Gracias a la posibilidad de abtraccion.
+     * @param numeroDestino Numero a llamar
+     * @return int representa el numero de minutos que duro la llamada.
+     */
     public int llamar(int numeroDestino){
         System.out.println("Llamando al numero " + numeroDestino);
         return 60;

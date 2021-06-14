@@ -6,6 +6,7 @@
 package repasobasico;
 
 import ico.fes.dispositivos.SmartPhone;
+import ico.fes.inegi.EncuestadorInegi;
 
 /**
  *
@@ -21,6 +22,17 @@ public class RepasoBasico {
         SmartPhone cel2 = new SmartPhone("Huawei", "P40", "Gris", 5.5f);
         System.out.println(cel1);
         System.out.println(cel2);
-    }
-    
+        
+        //Uso de metodo de acceso
+        cel1.setModelo("Galaxy Note 10");
+        System.out.println(cel1);
+        System.out.println("Marca del cel:" + cel1.getMarca());
+        
+        cel1.setTamano(5.6f);
+        System.out.println(cel1);
+        
+        EncuestadorInegi enc1 = new EncuestadorInegi();
+        enc1.setDispositivo(cel2);
+        
+    }    
 }
