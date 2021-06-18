@@ -9,7 +9,7 @@ import ico.fes.dispositivos.SmartPhone;
 
 /**
  *
- * @author Saul
+ * @author Waldemar
  */
 public class EncuestadorInegi {
     private String nombre;
