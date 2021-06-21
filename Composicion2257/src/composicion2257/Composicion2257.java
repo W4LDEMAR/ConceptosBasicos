@@ -6,6 +6,7 @@
 package composicion2257;
 
 import ico.fes.objetos.Puerta;
+import ico.fes.objetos.PuertaDeSeguridad;
 import ico.fes.objetos.Ventana;
 import ico.fes.partes.Muro;
 import java.awt.Color;
@@ -38,7 +39,16 @@ public class Composicion2257 {
         
         Muro muroSur = new Muro(5.0f, 4.5f, 2.5f, Color.blue, 
                 new Puerta("Aluminio", Color.white, false), null);
+        System.out.println("Ejemplo de herencia:" );
+        PuertaDeSeguridad puer1 = new PuertaDeSeguridad();
+        System.out.println(puer1);
+        puer1.abrir();
+        puer1.cerrar();
+        puer1.setColor(Color.gray);
+        System.out.println("El color de la puerta de sefuridad es:" + puer1.getColor());
         
+        PuertaDeSeguridad puer2 = new PuertaDeSeguridad("Chapa electronica", "1234dios", "metal", Color.gray, false);
+        System.out.println(puer2.toString());
     }
     
 }
