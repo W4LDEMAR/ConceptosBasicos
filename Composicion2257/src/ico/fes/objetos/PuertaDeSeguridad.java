@@ -30,7 +30,7 @@ public class PuertaDeSeguridad extends Puerta {
         this.contrasenia = contraseña;
     }
 
-    public String getContraseña() {
+    public String getContrasenia() {
         return contrasenia;
     }
 
@@ -50,10 +50,18 @@ public class PuertaDeSeguridad extends Puerta {
     public String toString() {
         return super.toString() + "PuertaDeSeguridad{" + "mecanismo=" + mecanismo + ", contrasenia=" + contrasenia + '}';
     }
-    
-    public boolean verificar(){
+
+    public boolean verificar() {
         System.out.println("Verificando...");
         return this.contrasenia != null;
-        
     }
+
+    @Override
+    public void abrir() {
+        if (this.getContrasenia() == "1234dios") {
+
+        }
+        super.abrir(); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

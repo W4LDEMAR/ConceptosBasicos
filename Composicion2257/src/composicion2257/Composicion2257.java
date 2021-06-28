@@ -49,6 +49,13 @@ public class Composicion2257 {
         
         PuertaDeSeguridad puer2 = new PuertaDeSeguridad("Chapa electronica", "1234dios", "metal", Color.gray, false);
         System.out.println(puer2.toString());
+        
+        Puerta nueva = (Puerta)puer2;
+        System.out.println(nueva.getColor());
+        System.out.println(puer2.getMecanismo());
+        puer2.abrir();
+        
+        ((Puerta)puer2).abrir();
     }
     
 }
